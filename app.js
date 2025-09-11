@@ -1,4 +1,4 @@
-import express from 'express';
+/*import express from 'express';
 //import path from 'path';
 //import { fileURLToPath } from 'url';
 
@@ -14,10 +14,6 @@ app.use(express.json());
 // Middleware para servir arquivos da pasta "public"
 //app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', (req, res) => {
-  res.status(200).json("Página de início");
-});
 
 
-// Exporta o app para usar no server.js
-export default app;
+export default app;*/
