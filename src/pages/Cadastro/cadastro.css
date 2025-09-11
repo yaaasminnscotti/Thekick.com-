@@ -1,26 +1,155 @@
-.container{
+body,
+html {
+    background: linear-gradient(to bottom,
+     #7B62A7,
+     #8E6DC6,
+     #4D2D84,
+     #302641);
+     font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 40px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #7772C2, #635EA2, #5B5796);
+    width: 30%;
+    align-items: center;
+}
+
+h2 {
+    font-size: 20px;
+    color: white;
+}
+
+h2 a{
+    color: white;
+-webkit-text-stroke-color: white;
+text-decoration: none;
+-webkit-text-stroke-width: 0px;
+font-weight: bold;
+}
+
+h2 a:hover {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 7%,
+    rgba(235, 122, 235, 1) 50%,
+    rgba(123, 0, 168, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container {
     display: flex;
     align-items: center;
-    background-color: navy;
-    width: 500px;
-    height: 500px;
+    justify-content: center;
+    padding: 130px;
+    height: 100%;
+    box-sizing: border-box;
+}
 
-    h1{
-        color: #fff;
-        font-size: 60px;
+
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    background-color: #4C439B;
+    border: none;
+    padding: 25px;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+input[type="submit"] {
+    background-color: #ffffff;
+    color: #815ec2;
+    border: none;
+    padding: 20px 60px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bold;
+    transition:  450ms;
+}
+
+input[type="submit"]:hover {
+    background-color: #815ec2;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgb(255, 255, 255);
+}
+
+::placeholder {
+    color: #ffffff;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 120px;
     }
 
-    form{
-        display: flex;
-        flex-direction: column;
-        gap: 35px;
-        padding: 40px;
-        border-radius: 20px;
-        background-color: aquamarine;
-    }
-
-    h2{
-        font-size: 28px;
+    form {
+        width: 50%;
     }
 }
 
+@media (max-width: 768px) {
+    .container {
+        padding: 60px 20px;
+    }
+
+    form {
+        width: 80%;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 40px 15px;
+    }
+
+    form {
+        width: 95%;
+        padding: 20px;
+        gap: 25px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="submit"] {
+        padding: 12px;
+    }
+}
