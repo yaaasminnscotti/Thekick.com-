@@ -16,6 +16,10 @@
   align-items: center; 
 }
 
+.fonte{
+  font-size: 22px;
+}
+
 .menu {
     display: flex;
     background-color: #4e489c;

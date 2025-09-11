@@ -23,10 +23,10 @@ function Cabecalho() {
           </div>
         </form>
 
-        <Link to="/">Início</Link>
-        <Link to="/novidades">Novidades</Link>
-        <Link to="/conteudo">Conteúdo</Link>
-        <Link to="/usuarios">Usuários</Link>
+        <Link  to="/" className='fonte'>Início</Link>
+        <Link  to="/novidades" className='fonte'>Novidades</Link>
+        <Link  to="/conteudo" className='fonte'>Conteúdo</Link>
+        <Link  to="/usuarios" className='fonte'>Usuários</Link>
 
         <img className="imagem-avatar" src={Avatar} alt="Avatar" />
       </div>
