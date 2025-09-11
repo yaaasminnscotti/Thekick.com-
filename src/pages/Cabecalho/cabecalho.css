@@ -1,0 +1,150 @@
+.imagem-logo{
+  width: 96px;
+  margin-left: -50px;
+}
+
+.imagem-logo:hover{
+  transform: scale(1.2);
+  transition: transform 0.5s;
+}
+
+.menu-wrapper {
+  margin-top: 40px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.menu {
+    display: flex;
+    background-color: #4e489c;
+    width: 1560px;
+    height: 90px;
+    gap: 100px;
+    border-radius: 10px ;
+    align-items: center;
+    font-size: 24px;
+}
+
+.menu a{
+    margin-left: 5px;
+    font-size: 24px;
+    padding: 10px 15px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #E73FA2;
+    font-weight: 600;
+    
+}
+
+.menu a:hover{
+  background-color: rgba(119, 114, 194);
+  transform: scale(1.2);
+  transition: transform 0.4s;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.pesquisar__input {
+  width: 350px;
+  padding: 15px 20px; 
+  border-radius: 15px;
+  border: 1.8px solid #302a2a;
+  font-size: 16px;
+}
+
+.pesquisar__input:hover{
+  cursor: pointer;
+}
+
+.lupa {
+  position: absolute;
+  right: 10px;
+  width: 30px;
+}
+
+.imagem-avatar{
+  width: 73px;
+}
+
+.imagem-avatar:hover{
+  transform: scale(1.2);
+  transition: transform 0.5s;
+}
+
+p, a{
+    -webkit-text-stroke-width: 1.3px;
+  -webkit-text-stroke-color: #000000;
+}
+
+/* ...existing code... */
+
+/* ...existing code... */
+
+@media (max-width: 1200px) {
+  .menu {
+    width: 98vw;
+    gap: 40px;
+    font-size: 20px;
+  }
+  .pesquisar__input {
+    width: 220px;
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+  .imagem-logo {
+    width: 70px;
+    margin-left: -20px;
+  }
+  .imagem-avatar {
+    width: 55px;
+  }
+}
+
+@media (max-width: 900px) {
+  .menu {
+    width: 98vw;
+    gap: 20px;
+    font-size: 16px;
+    height: 70px;
+  }
+  .pesquisar__input {
+    width: 120px;
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+  .imagem-logo {
+    width: 45px;
+    margin-left: 0;
+  }
+  .imagem-avatar {
+    width: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu {
+    width: 100vw;
+    gap: 8px;
+    font-size: 12px;
+    height: 50px;
+    border-radius: 0;
+    padding: 0 2vw;
+  }
+  .pesquisar__input {
+    width: 70px;
+    font-size: 10px;
+    padding: 4px 6px;
+  }
+  .imagem-logo,
+  .imagem-avatar {
+    width: 25px;
+  }
+}
+
+/* ...existing code... */

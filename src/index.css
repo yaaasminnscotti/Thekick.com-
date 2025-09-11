@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Krona+One&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100vh;
+  width: 100vw;
+  background-color: rgba(119, 114, 194);
+  font-family: "Afacad Flux", sans-serif;
+}

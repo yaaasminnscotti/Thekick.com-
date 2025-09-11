@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    align-items: center;
+    background-color: navy;
+    width: 500px;
+    height: 500px;
+
+    h1{
+        color: #fff;
+        font-size: 60px;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        padding: 40px;
+        border-radius: 20px;
+        background-color: aquamarine;
+    }
+
+    h2{
+        font-size: 28px;
+    }
+}
+
