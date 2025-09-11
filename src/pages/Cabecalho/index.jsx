@@ -1,6 +1,7 @@
 import './cabecalho.css'
-import Logo from '../../../public/imagens/logo.png'
-import Avatar from '../../../public/imagens/12225881.png'
+import Logo from '../../assets/imagens/logo.png'
+import Avatar from '../../assets/imagens/12225881.png'
+import Lupa from '../../assets/imagens/lupa.png'
 import { Link } from "react-router-dom";
 
 function Cabecalho() {
@@ -18,7 +19,7 @@ function Cabecalho() {
               type="search"
               placeholder="Pesquisar"
             />
-            <img src="/public/imagens/lupa.png" className="lupa" alt="Pesquisar" />
+            <img src={Lupa} className="lupa" alt="Pesquisar" />
           </div>
         </form>
 
