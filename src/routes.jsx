@@ -1,5 +1,5 @@
 import Home from "./pages/pagina-inicial"
-import Cadastro from "./pages/Cadastro"
+import Login from "./pages/Login"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 function Rotas(){
@@ -10,7 +10,7 @@ function Rotas(){
         <Route path="/" element={<Home />} />
 
         {/* Página de cadastro */}
-        <Route path="/cadastro" element={<Cadastro />} />
+        <Route path="/login" element={<Login />} />
 
       </Routes>
 </BrowserRouter>

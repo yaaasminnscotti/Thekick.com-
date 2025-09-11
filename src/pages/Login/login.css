@@ -1,10 +1,11 @@
 body,
 html {
-    background: linear-gradient(to bottom,
-     #7B62A7,
-     #8E6DC6,
-     #4D2D84,
-     #302641);
+    background: linear-gradient(to bottom, 
+	rgba(142, 109, 198, 0.9) 0%,
+        rgba(77, 45, 132, 0.9) 39%,
+        rgba(77, 45, 132, 0.9) 63%,
+        rgba(48, 38, 65, 0.9) 100%
+	);
      font-family: Arial, sans-serif;
 }
 
@@ -20,8 +21,11 @@ form {
     gap: 35px;
     padding: 40px;
     border-radius: 20px;
-    background: linear-gradient(to bottom, #7772C2, #635EA2, #5B5796);
-    width: 30%;
+    background: linear-gradient(to bottom,
+     #7772C2 36%, 
+     #635EA2 48%,
+     #5B5796 53%);
+    width: 25%;
     align-items: center;
 }
 
@@ -45,6 +49,8 @@ h2 a:hover {
     rgba(235, 122, 235, 1) 50%,
     rgba(123, 0, 168, 1) 100%
   );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .container {
@@ -56,8 +62,6 @@ h2 a:hover {
     box-sizing: border-box;
 }
 
-
-
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -67,7 +71,7 @@ input[type="password"] {
     border-radius: 20px;
     color: white;
     font-size: 16px;
-    width: 100%;
+    width: 90%;
     box-sizing: border-box;
 
 }
@@ -76,8 +80,8 @@ input[type="submit"] {
     background-color: #ffffff;
     color: #815ec2;
     border: none;
-    padding: 20px 60px;
-    border-radius: 8px;
+    padding: 20px 40px;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 30px;
     font-weight: bold;
@@ -85,10 +89,15 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #815ec2;
+    background-color: #a183d8;
     color: white;
     transform: scale(1.1);
     box-shadow: 0 0 30px rgb(255, 255, 255);
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 ::placeholder {

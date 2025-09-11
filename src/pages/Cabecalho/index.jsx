@@ -28,7 +28,7 @@ function Cabecalho() {
         <Link  to="/conteudo" className='fonte'>Conteúdo</Link>
         <Link  to="/usuarios" className='fonte'>Usuários</Link>
 
-        <img className="imagem-avatar" src={Avatar} alt="Avatar" />
+      <a href="/login"><img className="imagem-avatar" src={Avatar} alt="Avatar" /></a>
       </div>
     </div>
   );
