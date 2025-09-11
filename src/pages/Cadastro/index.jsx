@@ -1,18 +1,19 @@
+import { Link } from 'react-router-dom'
 import './cadastro.css'
 
 function Cadastro() {
   return (
     <div className='container'>
-      <form>
-        <h1>Login</h1>
-        <input name='nome' type="text" placeholder='Nome'/>
-        <input name='email' type="email" placeholder='E-mail'/>
-        <input name='senha' type="password" placeholder='Senha'/>
-         <input type="submit" value="Cadastrar"/>
-         <h2>Sem conta? Cadastre-se</h2>
-       
-      </form>
+            <form>
+              <h1>Login</h1>
+                <input name='nome' type="text" placeholder='Usuário'/>
+                <input name='email' type="email" placeholder='E-mail'/>
+                <input name='senha' type="password" placeholder='Senha'/>
+                <input type="submit" value="Entrar"/>
+              <h2>Não possui conta? <Link>Cadastre-se</Link></h2>
+          </form>
     </div>
+    
   )
 }
 
