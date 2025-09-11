@@ -26,8 +26,16 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+html, body {
+    height: 100%;
+}
 body {
-	line-height: 1;
+    background: linear-gradient(to bottom, 
+	rgba(142, 109, 198, 0.9) 0%,
+        rgba(77, 45, 132, 0.9) 31%,
+        rgba(77, 45, 132, 0.9) 57%,
+        rgba(48, 38, 65, 0.9) 100%
+	)
 }
 ol, ul {
 	list-style: none;
