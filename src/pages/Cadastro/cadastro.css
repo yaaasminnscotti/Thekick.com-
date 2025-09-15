@@ -74,7 +74,7 @@ input[type="password"] {
 
 }
 
-input[type="submit"] {
+button {
     background-color: #ffffff;
     color: #815ec2;
     border: none;
@@ -84,9 +84,9 @@ input[type="submit"] {
     font-size: 30px;
     font-weight: bold;
     transition:  450ms;
+    text-decoration: none;
 }
-
-input[type="submit"]:hover {
+button:hover {
     background-color: #815ec2;
     color: white;
     transform: scale(1.1);

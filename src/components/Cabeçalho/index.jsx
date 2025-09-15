@@ -1,7 +1,7 @@
-import './pagina.css'
+import './cabecalho.css'
 import Logo from '../../assets/imagens/logo.png'
 import Avatar from '../../assets/imagens/12225881.png'
-import Lupa from '../../assets/imagens/lupa.png'
+import Lupa from '../../../assets/imagens/lupa.png'
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -51,18 +51,6 @@ function Cabecalho() {
         <Link to="/novidades" className='fonte'>Novidades</Link>
         <Link to="/conteudo" className='fonte'>Conteúdo</Link>
         <Link to="/usuarios" className='fonte'>Usuários</Link>
-
-
-        {isLoggedIn ? (
-          <div className="user-menu">
-            <img className="imagem-avatar" src={Avatar} alt="Avatar" />
-            <div className="dropdown-menu">
-              <button onClick={handleLogout}>Sair</button>
-            </div>
-          </div>
-        ) : (
-          <Link to="/cadastro" className='fonte'>Fazer Login</Link>
-        )}
       </div>
     </div>
   );
