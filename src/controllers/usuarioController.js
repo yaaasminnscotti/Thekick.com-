@@ -1,4 +1,5 @@
 import Usuario from '../models/usuarios.js';
+import { VerificaLogin } from '../utils/verificaLogin.js';
 
 class UsuarioController {
   static async listar(req, res) {
@@ -13,6 +14,8 @@ class UsuarioController {
 
   static async criar(req, res) {
     const novoUsuario = await Usuario.create(req.body);
+    localStorage.setItem(`user-${novoUsuario.id}`, `${novoUsuario}`)
+
     res.json(novoUsuario);
   }
 
@@ -24,6 +27,24 @@ class UsuarioController {
   static async deletar(req, res) {
     await Usuario.destroy({ where: { id_usuario: req.params.id } });
     res.json({ message: 'Usuário deletado!' });
+  }
+  static async login(req, res){
+      const usuarioLogado = VerificaLogin.estaLogado(req.params.id);
+      if(!usuarioLogado){
+        res.json({message: 'Usuário não encontrado'})
+      } else if(usuarioLogado == 'true'){
+        res.json({ message: 'Usuário Já está conectado' });
+      }
+      else{
+        localStorage.setItem('logged', `${usuarioLogado}`);
+      }
+  }
+  static async deslogar(req, res){
+    const usuarioLogado = VerificaLogin.estaLogado(req.params.id);
+      if(usuarioLogado){
+        localStorage.removeItem('logged');
+        res.json({ message: 'Usuário desconectado com sucesso' });
+      }
   }
 }
 
