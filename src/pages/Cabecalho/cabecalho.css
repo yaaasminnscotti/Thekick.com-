@@ -23,7 +23,7 @@
 .menu {
     display: flex;
     background-color: #4e489c;
-    width: 1560px;
+    width: 90%;
     height: 90px;
     gap: 100px;
     border-radius: 10px ;
@@ -52,14 +52,16 @@
   position: relative;
   display: flex;
   align-items: center;
+  height: 10px;
+  background-color: rgba(119, 114, 194);
 }
 
 .pesquisar__input {
-  width: 350px;
-  padding: 15px 20px; 
+  width: 400px;
+  padding: 7px 20px; 
   border-radius: 15px;
   border: 1.8px solid #302a2a;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .pesquisar__input:hover{
@@ -85,10 +87,6 @@ p, a{
     -webkit-text-stroke-width: 1.3px;
   -webkit-text-stroke-color: #000000;
 }
-
-/* ...existing code... */
-
-/* ...existing code... */
 
 @media (max-width: 1200px) {
   .menu {
