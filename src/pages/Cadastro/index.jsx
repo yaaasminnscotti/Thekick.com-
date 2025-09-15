@@ -9,8 +9,9 @@ function Cadastro() {
                 <input name='nome' type="text" placeholder='Usuário'/>
                 <input name='email' type="email" placeholder='E-mail'/>
                 <input name='senha' type="password" placeholder='Senha'/>
-                <input type="submit" value="Entrar"/>
-              <h2>Não possui conta? <Link>Cadastre-se</Link></h2>
+                <input name='confirmar_senha' type="password" placeholder='Confirme sua senha'/>
+                <input type="submit" value="Cadastrar"/>
+              <h2>Já possui uma conta? <Link to="/login">Entrar</Link></h2>
           </form>
     </div>
     

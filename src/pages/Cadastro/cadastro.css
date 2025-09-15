@@ -45,13 +45,15 @@ h2 a:hover {
     rgba(235, 122, 235, 1) 50%,
     rgba(123, 0, 168, 1) 100%
   );
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 130px;
+    padding: 70px;
     height: 100%;
     box-sizing: border-box;
 }

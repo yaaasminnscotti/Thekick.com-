@@ -1,5 +1,6 @@
 import Home from "./pages/pagina-inicial"
 import Login from "./pages/Login"
+import Cadastro from "./pages/Cadastro"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 function Rotas(){
@@ -9,8 +10,13 @@ function Rotas(){
         {/* Página inicial (cabeçalho + botão) */}
         <Route path="/" element={<Home />} />
 
-        {/* Página de cadastro */}
+        {/* Página de login */}
         <Route path="/login" element={<Login />} />
+
+         {/* Página de cadastro */}
+        <Route path="/cadastro" element={<Cadastro />} />
+
+
 
       </Routes>
 </BrowserRouter>

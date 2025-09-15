@@ -10,7 +10,7 @@ function Login() {
                 <input name='email' type="email" placeholder='E-mail'/>
                 <input name='senha' type="password" placeholder='Senha'/>
                 <input type="submit" value="Entrar"/>
-              <h2>Não possui conta? <Link>Cadastre-se</Link></h2>
+              <h2>Não possui conta? <Link to="/cadastro">Cadastre-se</Link></h2>
           </form>
     </div>
     
