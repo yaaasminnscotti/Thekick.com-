@@ -1,4 +1,4 @@
-import Usuario from "../models/usuarios";
+import Usuario from "../models/usuarios.js";
 //import { scryptSync, timingSafeEqual} from 'crypto'
 
 export class VerificaLogin{

@@ -1,5 +1,7 @@
+import { Op } from 'sequelize';
 import Usuario from '../models/usuarios.js';
 import { VerificaLogin } from '../utils/verificaLogin.js';
+
 
 class UsuarioController {
   static async listar(req, res) {
@@ -46,6 +48,22 @@ class UsuarioController {
         res.json({ message: 'Usuário desconectado com sucesso' });
       }
   }
+  static async filtrarPorNome(req, res) {
+    const { nome } = req.query; // pega o ?nome= do navegador
+    try {
+      const usuarios = await Usuario.findAll({
+        where: {
+          nome_usuario: {
+            [Op.iLike]: `%${nome}%` // iLike = case insensitive (Postgres)
+          }
+        }
+      });
+      res.status(200).json(usuarios);
+    } catch (erro) {
+      res.status(500).json({ message: `${erro.message} - erro no filtro` });
+    }
+  }
+
 }
 
 export default UsuarioController;

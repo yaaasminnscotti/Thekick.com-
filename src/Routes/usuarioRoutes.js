@@ -3,6 +3,7 @@ import UsuarioController from '../controllers/usuarioController.js';
 
 const router = express.Router();
 
+router.get('/usuarios/filtro', UsuarioController.filtrarPorNome);
 router.get('/', UsuarioController.listar);
 router.get('/:id', UsuarioController.listarPorId);
 router.post('/', UsuarioController.criar);
