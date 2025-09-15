@@ -1,0 +1,134 @@
+body {
+    padding: 102px;
+background: linear-gradient(to bottom, 
+	rgba(142, 109, 198, 0.9) 0%,
+        rgba(77, 45, 132, 0.9) 39%,
+        rgba(77, 45, 132, 0.9) 63%,
+        rgba(48, 38, 65, 0.9) 100%)
+};
+.profile-container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 30px;
+}
+
+.profile-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 24px;
+}
+
+.profile-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid #ddd;
+  transition: all 0.3s ease;
+
+}
+
+.profile-image:hover {
+  border-color: #4d00b3;
+  transform: scale(1.05);
+}
+
+.profile-image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #757575;
+}
+
+.profile-image-placeholder span {
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+.profile-image-placeholder p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 32%;
+  margin-bottom: 300px;
+  margin-top: 12px;
+  background: linear-gradient(to bottom,
+     #7772C2 36%, 
+     #635EA2 48%,
+     #5B5796 53%);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #4d00b3;
+  outline: none;
+}
+
+.save-button {
+  background-color: #ffffff;
+  color: #815ec2;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.save-button:hover {
+  background-color: #a183d8;
+  color: white;
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  .profile-container {
+    padding: 20px;
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+}

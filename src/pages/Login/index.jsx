@@ -54,7 +54,7 @@ function Login() {
           value={formData.senha}
           onChange={handleChange}
         />
-        <button type="submit" onClick={"/pagina"}>Entrar</button>
+        <button type="submit" onClick={"/"}>Entrar</button>
         <h2>Não possui uma conta? <Link to="/cadastro">Cadastre-se</Link></h2>
       </form>
     </div>
