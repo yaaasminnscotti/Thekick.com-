@@ -2,6 +2,7 @@ import { Op } from 'sequelize';
 import Usuario from '../models/usuarios.js';
 import { VerificaLogin } from '../utils/verificaLogin.js';
 import { criaTokenJwt } from '../utils/criaTokenJwt.js';
+import criaHashComSal from '../utils/criaHashSenha.js';
 
 
 class UsuarioController {
@@ -17,8 +18,11 @@ class UsuarioController {
 
   static async criar(req, res) {
   try {
+    const senhaHasheada = criaHashComSal(req.body.senha_usuario);
+    req.body.senha_usuario = senhaHasheada;//necessário testar :(
     const novoUsuario = await Usuario.create(req.body);
-    const token = criaTokenJwt(req.body.nome);
+    const token = criaTokenJwt(req.body.nome_usuario);
+    
 
     res.status(201).json(`${novoUsuario}, token: ${token}`);
   } catch (erro) {
@@ -37,7 +41,7 @@ class UsuarioController {
   }
   static async login(req, res){
     const usuario = req.body
-      const usuarioLogado = VerificaLogin.estaLogado(req.params.id, req.user);
+      const usuarioLogado = VerificaLogin.estaLogado(req.params.id, req.user, req.body.senha_usuario);
       if(!usuarioLogado){
         res.json({message: 'Usuário não encontrado'})
       } else if(usuarioLogado == 'true'){
