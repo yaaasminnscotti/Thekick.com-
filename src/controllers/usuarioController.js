@@ -2,6 +2,7 @@ import { Op } from 'sequelize';
 import Usuario from '../models/usuarios.js';
 import { VerificaLogin } from '../utils/verificaLogin.js';
 import { criaTokenJwt } from '../utils/criaTokenJwt.js';
+import criaHashComSal from '../utils/criaHashSenha.js';
 
 
 class UsuarioController {
@@ -17,8 +18,11 @@ class UsuarioController {
 
   static async criar(req, res) {
   try {
+    const senhaHasheada = criaHashComSal(req.body.senha_usuario);
+    req.body.senha_usuario = senhaHasheada;
     const novoUsuario = await Usuario.create(req.body);
-    const token = criaTokenJwt(req.body.nome);
+    const token = criaTokenJwt(req.body.nome_usuario);
+    
 
     res.status(201).json(`${novoUsuario}, token: ${token}`);
   } catch (erro) {
