@@ -15,11 +15,13 @@ class UsuarioController {
   }
 
   static async criar(req, res) {
+  try {
     const novoUsuario = await Usuario.create(req.body);
-    localStorage.setItem(`user-${novoUsuario.id}`, `${novoUsuario}`)
-
-    res.json(novoUsuario);
+    res.status(201).json(novoUsuario);
+  } catch (erro) {
+    res.status(500).json({ error: erro.message });
   }
+}
 
   static async atualizar(req, res) {
     await Usuario.update(req.body, { where: { id_usuario: req.params.id } });
