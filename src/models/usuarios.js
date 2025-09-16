@@ -29,6 +29,10 @@ Usuario.init({
     type: DataTypes.STRING(40),
     allowNull: true
   },
+  senha_usuario: {
+  type: DataTypes.STRING(255),
+  allowNull: false
+}
 }, {
   sequelize,
   modelName: 'usuarios',
