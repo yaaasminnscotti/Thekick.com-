@@ -24,6 +24,8 @@ Usuario.init({
 }, {
   sequelize,
   modelName: 'usuarios',
+  tableName: 'usuarios',   // garante o nome da tabela exato
+  freezeTableName: true,
   timestamps: false
 });
 
