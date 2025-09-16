@@ -1,13 +1,13 @@
 import Usuario from "../models/usuarios.js";
-//import { scryptSync, timingSafeEqual} from 'crypto'
+import { decodificaHash } from "./DecodificaHash.js";
 
 export class VerificaLogin{
   constructor(){}
-  async estaLogado(id, payload){
+  async estaLogado(id, payload, senha){
     const usuario = await Usuario.findOne({ where: { id_usuario: id }} );
-    // const senhaENomeCorretos =  await autentica(usuario.nome, usuario.login);
+    const senhaCorreta =  await decodificaHash(senha, usuario.senha_usuario);
     const reqUsuario =  payload;
-    if(!(usuario || reqUsuario)){
+    if(!(usuario || reqUsuario || senhaCorreta)){
         return false;
     }
     

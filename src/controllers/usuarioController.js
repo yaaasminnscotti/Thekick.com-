@@ -19,7 +19,7 @@ class UsuarioController {
   static async criar(req, res) {
   try {
     const senhaHasheada = criaHashComSal(req.body.senha_usuario);
-    req.body.senha_usuario = senhaHasheada;
+    req.body.senha_usuario = senhaHasheada;//necessário testar :(
     const novoUsuario = await Usuario.create(req.body);
     const token = criaTokenJwt(req.body.nome_usuario);
     
@@ -41,7 +41,7 @@ class UsuarioController {
   }
   static async login(req, res){
     const usuario = req.body
-      const usuarioLogado = VerificaLogin.estaLogado(req.params.id, req.user);
+      const usuarioLogado = VerificaLogin.estaLogado(req.params.id, req.user, req.body.senha_usuario);
       if(!usuarioLogado){
         res.json({message: 'Usuário não encontrado'})
       } else if(usuarioLogado == 'true'){
