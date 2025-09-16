@@ -1,6 +1,7 @@
 import Home from "./pages/pagina-inicial"
 import Login from "./pages/Login"
 import Cadastro from "./pages/Cadastro"
+import Perfil from "./pages/Perfil"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 function Rotas(){
@@ -16,7 +17,8 @@ function Rotas(){
          {/* Página de cadastro */}
         <Route path="/cadastro" element={<Cadastro />} />
 
-
+         {/* Página de perfil */}
+        <Route path="/perfil" element={<Perfil />} />
 
       </Routes>
 </BrowserRouter>
