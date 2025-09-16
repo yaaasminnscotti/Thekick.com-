@@ -1,6 +1,7 @@
 import { Op } from 'sequelize';
 import Usuario from '../models/usuarios.js';
 import { VerificaLogin } from '../utils/verificaLogin.js';
+import { criaTokenJwt } from '../utils/criaTokenJwt.js';
 
 
 class UsuarioController {
@@ -16,9 +17,9 @@ class UsuarioController {
 
   static async criar(req, res) {
     const novoUsuario = await Usuario.create(req.body);
-    localStorage.setItem(`user-${novoUsuario.id}`, `${novoUsuario}`)
+    const token = criaTokenJwt(req.body.nome);
 
-    res.json(novoUsuario);
+    res.json(`${novoUsuario}, token: ${token}`);
   }
 
   static async atualizar(req, res) {
@@ -31,7 +32,7 @@ class UsuarioController {
     res.json({ message: 'Usuário deletado!' });
   }
   static async login(req, res){
-      const usuarioLogado = VerificaLogin.estaLogado(req.params.id);
+      const usuarioLogado = VerificaLogin.estaLogado(req.params.id, req.user);
       if(!usuarioLogado){
         res.json({message: 'Usuário não encontrado'})
       } else if(usuarioLogado == 'true'){
@@ -44,7 +45,7 @@ class UsuarioController {
   static async deslogar(req, res){
     const usuarioLogado = VerificaLogin.estaLogado(req.params.id);
       if(usuarioLogado){
-        localStorage.removeItem('logged');
+        req.user = "";// esse aqui não faço a menor ideia de como fazer
         res.json({ message: 'Usuário desconectado com sucesso' });
       }
   }

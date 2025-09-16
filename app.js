@@ -1,7 +1,7 @@
 /*import express from 'express';
 //import path from 'path';
 //import { fileURLToPath } from 'url';
-
+//import dotenv from 'dotenv';
 const app = express();
 
 // Corrige __dirname em ES Modules
