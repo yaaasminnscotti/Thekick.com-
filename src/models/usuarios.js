@@ -20,7 +20,15 @@ Usuario.init({
   telefone_usuario: {
     type: DataTypes.STRING(15),
     allowNull: true
-  }
+  },
+  email_usuario: {
+    type: DataTypes.STRING(40),
+    allowNull: false
+  },
+   pais_usuario: {
+    type: DataTypes.STRING(40),
+    allowNull: true
+  },
 }, {
   sequelize,
   modelName: 'usuarios',

@@ -16,11 +16,15 @@ class UsuarioController {
   }
 
   static async criar(req, res) {
+  try {
     const novoUsuario = await Usuario.create(req.body);
     const token = criaTokenJwt(req.body.nome);
 
-    res.json(`${novoUsuario}, token: ${token}`);
+    res.status(201).json(`${novoUsuario}, token: ${token}`);
+  } catch (erro) {
+    res.status(500).json({ error: erro.message });
   }
+}
 
   static async atualizar(req, res) {
     await Usuario.update(req.body, { where: { id_usuario: req.params.id } });

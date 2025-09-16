@@ -29,12 +29,16 @@
 .menu {
     display: flex;
     background-color: #4e489c;
-    width: 90vw;
+    width: 85vw;
     height: 90px;
     gap: 50px;
     border-radius: 10px ;
     align-items: center;
     font-size: 24px;
+}
+
+.menu img {
+ margin: 0;
 }
 
 .menu a{
@@ -185,4 +189,10 @@ p, a{
 
 .user-menu:hover .dropdown-menu {
   display: block;
+}
+
+.foto_perfil {
+  width: 70px;
+  height: 65px;
+  
 }
