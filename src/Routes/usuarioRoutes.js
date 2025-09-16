@@ -9,7 +9,7 @@ router.get('/:id', UsuarioController.listarPorId);
 router.post('/', UsuarioController.criar);
 router.put('/:id', UsuarioController.atualizar);
 router.delete('/:id', UsuarioController.deletar);
-router.get('/login/:id', UsuarioController.login);
+router.post('/login/:id', UsuarioController.login);
 
 router.get('/deslogar/:id', UsuarioController.deslogar);
 

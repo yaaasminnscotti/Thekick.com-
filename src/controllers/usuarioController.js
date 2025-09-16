@@ -32,6 +32,7 @@ class UsuarioController {
     res.json({ message: 'Usuário deletado!' });
   }
   static async login(req, res){
+    const usuario = req.body
       const usuarioLogado = VerificaLogin.estaLogado(req.params.id, req.user);
       if(!usuarioLogado){
         res.json({message: 'Usuário não encontrado'})
@@ -39,7 +40,9 @@ class UsuarioController {
         res.json({ message: 'Usuário Já está conectado' });
       }
       else{
-        localStorage.setItem('logged', `${usuarioLogado}`);
+        const token = criaTokenJwt(usuario)
+        req.user = {usuario, token}
+        res.json({message:`token criado: ${token}`})
       }
   }
   static async deslogar(req, res){
