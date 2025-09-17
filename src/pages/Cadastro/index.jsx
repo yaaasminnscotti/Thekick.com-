@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./cadastro.css";
 import { useState } from "react";
+import Login from "../Login";
 
 function Cadastro() {
   const navigate = useNavigate();
@@ -69,7 +70,7 @@ function Cadastro() {
           value={formData.confirmar_senha}
           onChange={handleChange}
         />
-        <button type="submit" onClick={"/cabecalho"}>
+        <button type="submit" onClick={"/cabecalho"} onSubmit={Login}>
           Cadastrar
         </button>
         <h2>
