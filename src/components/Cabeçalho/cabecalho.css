@@ -1,3 +1,9 @@
+@import url(../../index.css);
+
+.fundo{
+    font-size: 22px;
+}
+
 .imagem-logo{
   width: 96px;
   margin-left: -50px;
@@ -8,14 +14,6 @@
   transition: transform 0.5s;
 }
 
-.menu-wrapper {
-  margin-top: 40px;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-}
-
 .fonte{
   font-size: 22px;
 }
@@ -23,12 +21,22 @@
 .menu {
     display: flex;
     background-color: #4e489c;
-    width: 90vw;
+    width: 85vw;
     height: 90px;
     gap: 50px;
     border-radius: 10px ;
     align-items: center;
     font-size: 24px;
+}
+
+.menu-wrapper{
+  justify-content: center;
+  display: flex;
+  padding-top: 80px;
+}
+
+.menu img {
+ margin: 0;
 }
 
 .menu a{
@@ -88,67 +96,6 @@ p, a{
   -webkit-text-stroke-color: #000000;
 }
 
-@media (max-width: 1200px) {
-  .menu {
-    width: 98vw;
-    gap: 40px;
-    font-size: 20px;
-  }
-  .pesquisar__input {
-    width: 220px;
-    font-size: 14px;
-    padding: 10px 16px;
-  }
-  .imagem-logo {
-    width: 70px;
-    margin-left: -20px;
-  }
-  .imagem-avatar {
-    width: 55px;
-  }
-}
-
-@media (max-width: 900px) {
-  .menu {
-    width: 98vw;
-    gap: 20px;
-    font-size: 16px;
-    height: 70px;
-  }
-  .pesquisar__input {
-    width: 120px;
-    font-size: 12px;
-    padding: 8px 10px;
-  }
-  .imagem-logo {
-    width: 45px;
-    margin-left: 0;
-  }
-  .imagem-avatar {
-    width: 35px;
-  }
-}
-
-@media (max-width: 600px) {
-  .menu {
-    width: 100vw;
-    gap: 8px;
-    font-size: 12px;
-    height: 50px;
-    border-radius: 0;
-    padding: 0 2vw;
-  }
-  .pesquisar__input {
-    width: 70px;
-    font-size: 10px;
-    padding: 4px 6px;
-  }
-  .imagem-logo,
-  .imagem-avatar {
-    width: 25px;
-  }
-}
-
 .user-menu {
   position: relative;
   display: inline-block;
@@ -179,4 +126,10 @@ p, a{
 
 .user-menu:hover .dropdown-menu {
   display: block;
+}
+
+.foto_perfil {
+  width: 70px;
+  height: 65px;
+  
 }
