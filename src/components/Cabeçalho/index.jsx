@@ -1,5 +1,8 @@
 import './cabecalho.css'
-import {Logo, Avatar, Lupa} from '../../assets/imagens/logo.png'
+// import {Logo, Avatar, Lupa} from '../../assets/imagens'
+import Logo from '../../assets/imagens/logo.png'
+import Lupa from '../../assets/imagens/lupa.png'
+import Avatar from '../../assets/imagens/avatar.png'
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
