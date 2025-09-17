@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', PostagemController.listar);
 router.get('/:id', PostagemController.listarPorId);
-router.post('/',validaPostagem(), PostagemController.criar);
+router.post('/',validaPostagem, PostagemController.criar);
 router.put('/:id', PostagemController.atualizar);
 router.delete('/:id', PostagemController.deletar);
 

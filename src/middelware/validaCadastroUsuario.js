@@ -1,4 +1,4 @@
-import { usuarioSchema } from "../validacoes/usuarioSchema";
+import { usuarioSchema } from "../validacoes/usuarioSchema.js";
 
 async function validaCadastroUsuario(req, res, next){
     try {
