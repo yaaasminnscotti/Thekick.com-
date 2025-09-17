@@ -1,4 +1,8 @@
-import { postagemSchema } from "../validacoes/postagemSchema.js";
+import yup, { date } from 'yup'
+
+const postagemSchema = yup.object({
+    data_postagem: date().default(()=> new Date())
+})
 
 async function validaPostagem(req, res, next){
     try {
