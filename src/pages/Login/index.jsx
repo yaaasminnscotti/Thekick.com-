@@ -29,7 +29,7 @@ function Login() {
   return (
     <div className='container'>
       <form onSubmit={handleSubmit}>
-        <h5>Login</h5>
+        <h1>Criar Conta</h1>
         <input 
           name='nome' 
           type="text" 
