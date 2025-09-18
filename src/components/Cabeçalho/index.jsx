@@ -1,5 +1,4 @@
-import './cabecalho.css'
-// import {Logo, Avatar, Lupa} from '../../assets/imagens'
+import style from './cabecalho.module.css'
 import Logo from '../../assets/imagens/logo.png'
 import Lupa from '../../assets/imagens/lupa.png'
 import Avatar from '../../assets/imagens/avatar.png'
@@ -19,29 +18,29 @@ function Pagina() {
   }, []);
 
   return (
-    <div className="menu-wrapper">
-      <div className="menu">
-        <header className="imagem">
-          <img className="imagem-logo" src={Logo} alt="Logo" />
+    <div className={style.menuWrapper}>
+      <div className={style.menu}>
+        <header>
+          <img className={style.imagemLogo} src={Logo} alt="Logo" />
         </header>
 
-        <form className="pesquisar">
-          <div className="input-container">
+        <form className={style.pesquisar}>
+          <div className={style.inputContainer}>
             <input
-              className="pesquisar__input"
+              className={style.pesquisarInput}
               type="search"
               placeholder="Pesquisar"
             />
-            <img src={Lupa} className="lupa" alt="Pesquisar" />
+            <img src={Lupa} className={style.lupa} alt="Pesquisar" />
           </div>
         </form>
       
-        <Link to="/" className='fonte'>Início</Link>
-        <Link to="/novidades" className='fonte'>Novidades</Link>
-        <Link to="/conteudo" className='fonte'>Conteúdo</Link>
-        <Link to="/usuarios" className='fonte'>Usuários</Link>
+        <Link to="/" className={style.fonte}>Início</Link>
+        <Link to="/novidades" className={style.fonte}>Novidades</Link>
+        <Link to="/conteudo" className={style.fonte}>Conteúdo</Link>
+        <Link to="/usuarios" className={style.fonte}>Usuários</Link>
 
-      < Link to="/perfil"><img className="foto_perfil" src={Avatar} alt="avatar" /></Link>
+      < Link to="/perfil"><img className={style.fotoPerfil} src={Avatar} alt="avatar" /></Link>
 
       </div>
     </div>

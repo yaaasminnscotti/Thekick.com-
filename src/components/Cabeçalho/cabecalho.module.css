@@ -1,0 +1,123 @@
+@import url(../../index.css);
+
+.imagemLogo{
+  width: 96px;
+  margin-left: -50px;
+}
+
+.imagemLogo:hover{
+  transform: scale(1.2);
+  transition: transform 0.5s;
+}
+
+
+.menu {
+    display: flex;
+    background-color: #4e489c;
+    width: 85vw;
+    height: 90px;
+    gap: 50px;
+    border-radius: 10px ;
+    align-items: center;
+    font-size: 24px;
+}
+
+.menuWrapper{
+  justify-content: center;
+  display: flex;
+}
+
+.fonte{
+    margin-left: 5px;
+    font-size: 24px;
+    padding: 10px 15px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    color: #E73FA2;
+    font-weight: 600;
+    
+}
+
+.fonte:hover{
+  background-color: rgba(119, 114, 194);
+  transform: scale(1.2);
+  transition: transform 0.4s;
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 10px;
+  background-color: rgba(119, 114, 194);
+}
+
+.pesquisarInput {
+  width: 400px;
+  padding: 7px 20px; 
+  border-radius: 15px;
+  border: 1.8px solid #302a2a;
+  font-size: 15px;
+}
+
+.pesquisarInput:hover{
+  cursor: pointer;
+}
+
+.lupa {
+  position: absolute;
+  right: 10px;
+  width: 30px;
+}
+
+.imagemAvatar{
+  width: 73px;
+}
+
+.imagemAvatar:hover{
+  transform: scale(1.2);
+  transition: transform 0.5s;
+}
+
+p, a{
+    -webkit-text-stroke-width: 1.3px;
+  -webkit-text-stroke-color: #000000;
+}
+
+.userMenu {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdownMenu button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.userMenu:hover .dropdownMenu {
+  display: block;
+}
+
+.fotoPerfil {
+  width: 70px;
+  height: 65px;
+  
+}
