@@ -33,6 +33,7 @@ function Pagina() {
             />
             <img src={Lupa} className={style.lupa} alt="Pesquisar" />
           </div>
+          <input type="text" />
         </form>
       
         <Link to="/" className={style.fonte}>Início</Link>

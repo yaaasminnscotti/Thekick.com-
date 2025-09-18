@@ -1,10 +1,11 @@
 body {
-    padding: 102px;
-background: linear-gradient(to bottom, 
+  padding: 102px;
+  background: linear-gradient(to bottom, 
 	rgba(142, 109, 198, 0.9) 0%,
         rgba(77, 45, 132, 0.9) 39%,
         rgba(77, 45, 132, 0.9) 63%,
         rgba(48, 38, 65, 0.9) 100%)
+        
 };
 .profileContainer{
   background-color: white;
@@ -71,8 +72,6 @@ background: linear-gradient(to bottom,
   display: flex;
   flex-direction: column;
   margin-left: 32%;
-  margin-bottom: 300px;
-  margin-top: 12px;
   background: linear-gradient(to bottom,
      #7772C2 36%, 
      #635EA2 48%,
