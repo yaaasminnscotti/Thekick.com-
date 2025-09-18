@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import './perfil.css';
+import style from './perfil.module.css';
 
 const Perfil = () => {
   const [perfil, setPerfil] = useState({
@@ -47,17 +47,17 @@ const Perfil = () => {
   };
 
   return (
-    <div className="profile-container">
-      <h1 className="profile-title">Meu Perfil</h1>
+    <div className={style.profileContainer}>
+      <h1 className={style.profileTitle}>Meu Perfil</h1>
       
-      <div className="profile-image-container">
+      <div className={style.profileImageContainer}>
         <div 
-          className="profile-image"
+          className={style.profileImage}
           onClick={triggerFileInput}
           style={{ backgroundImage: perfil.foto ? `url(${perfil.foto})` : 'none' }}
         >
           {!perfil.foto && (
-            <div className="profile-image-placeholder">
+            <div className={style.profileImagePlaceholder}>
               <span>+</span>
               <p>Adicionar Foto</p>
             </div>
@@ -72,8 +72,8 @@ const Perfil = () => {
         />
       </div>
 
-      <form className="profile-form" onSubmit={handleSalvar}>
-        <div className="form-group">
+      <form className={style.profileForm} onSubmit={handleSalvar}>
+        <div className={style.formGroup}>
           <label htmlFor="nome">Nome:</label>
           <input
             type="text"
@@ -85,7 +85,7 @@ const Perfil = () => {
           />
         </div>
 
-        <div className="form-group">
+        <div className={style.formGroup}>
           <label htmlFor="email">E-mail:</label>
           <input
             type="email"
@@ -97,7 +97,7 @@ const Perfil = () => {
           />
         </div>
 
-        <div className="form-group">
+        <div className={style.formGroup}>
           <label htmlFor="pais">País:</label>
           <input
             type="text"
@@ -109,7 +109,7 @@ const Perfil = () => {
           />
         </div>
 
-        <div className="form-group">
+        <div className={style.formGroup}>
           <label htmlFor="celular">Celular:</label>
           <input
             type="tel"
@@ -123,7 +123,7 @@ const Perfil = () => {
           />
         </div>
 
-        <div className="form-group">
+        <div className={style.formGroup}>
           <label htmlFor="dataNascimento">Data de Nascimento:</label>
           <input
             type="date"
@@ -135,7 +135,7 @@ const Perfil = () => {
           />
         </div>
 
-        <button type="submit" className="save-button">Salvar</button>
+        <button type="submit" className={style.saveButton}>Salvar</button>
       </form>
     </div>
   );

@@ -6,7 +6,7 @@ background: linear-gradient(to bottom,
         rgba(77, 45, 132, 0.9) 63%,
         rgba(48, 38, 65, 0.9) 100%)
 };
-.profile-container {
+.profileContainer{
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -14,21 +14,21 @@ background: linear-gradient(to bottom,
   padding: 30px;
 }
 
-.profile-title {
+.profileTitle{
   text-align: center;
   margin-bottom: 30px;
   color: #333;
   font-size: 24px;
 }
 
-.profile-image-container {
+.profileImageContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
 }
 
-.profile-image {
+.profileImage{
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -45,29 +45,29 @@ background: linear-gradient(to bottom,
 
 }
 
-.profile-image:hover {
+.profileImage:hover {
   border-color: #4d00b3;
   transform: scale(1.05);
 }
 
-.profile-image-placeholder {
+.profileImagePlaceholder {
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #757575;
 }
 
-.profile-image-placeholder span {
+.profileImagePlaceholder span {
   font-size: 40px;
   font-weight: lighter;
 }
 
-.profile-image-placeholder p {
+.profileImagePlaceholder p {
   margin-top: 10px;
   font-size: 14px;
 }
 
-.profile-form {
+.profileForm{
   display: flex;
   flex-direction: column;
   margin-left: 32%;
@@ -79,18 +79,18 @@ background: linear-gradient(to bottom,
      #5B5796 53%);
 }
 
-.form-group {
+.formGroup{
   margin-bottom: 20px;
 }
 
-.form-group label {
+.formGroup label {
   display: block;
   margin-bottom: 5px;
   font-weight: 500;
   color: #ffffff;
 }
 
-.form-group input {
+.formGroup input {
   width: 100%;
   padding: 12px;
   border: 1px solid #ddd;
@@ -99,12 +99,12 @@ background: linear-gradient(to bottom,
   transition: border-color 0.3s;
 }
 
-.form-group input:focus {
+.formGroupinput:focus {
   border-color: #4d00b3;
   outline: none;
 }
 
-.save-button {
+.saveButton {
   background-color: #ffffff;
   color: #815ec2;
   border: none;
@@ -116,7 +116,7 @@ background: linear-gradient(to bottom,
   margin-top: 10px;
 }
 
-.save-button:hover {
+.saveButton:hover {
   background-color: #a183d8;
   color: white;
   transform: scale(1.1);

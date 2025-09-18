@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import "./cadastro.css";
+import style from "./cadastro.module.css";
 import { useState } from "react";
 import Login from "../Login";
 
@@ -35,7 +35,7 @@ function Cadastro() {
   };
 
   return (
-    <div className="container">
+    <div className={style.container}>
       <form onSubmit={handleSubmit}>
         <h1>Criar Conta</h1>
         <input

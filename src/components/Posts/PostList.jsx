@@ -22,7 +22,7 @@ export default function PostList() {
     },
     {
       id: 3,
-      nome: "Mariana",
+      nome: "Geovana",
       imagem: "/assets/imagens/logo.png",
       humor: "Relaxada ☕",
       conteudo: "Trabalhando e tomando café...",
