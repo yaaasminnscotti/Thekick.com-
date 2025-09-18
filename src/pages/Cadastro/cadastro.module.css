@@ -1,5 +1,6 @@
 body,
 html {
+    overflow: hidden;
     background: linear-gradient(to bottom,
      #7B62A7,
      #8E6DC6,
@@ -54,7 +55,7 @@ h2 a:hover {
     align-items: center;
     justify-content: center;
     padding: 70px;
-    height: 100%;
+    height: 706px;
     box-sizing: border-box;
 }
 
