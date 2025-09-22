@@ -57,10 +57,10 @@ function Post() {
       prev.map((p) =>
         p.id === id
           ? {
-              ...p,
-              liked: !p.liked,
-              likes: p.liked ? p.likes - 1 : p.likes + 1,
-            }
+            ...p,
+            liked: !p.liked,
+            likes: p.liked ? p.likes - 1 : p.likes + 1,
+          }
           : p
       )
     );
@@ -114,7 +114,7 @@ function Post() {
                 😃
               </button>
               {showEmojiHumor && (
-                <div style={{ position: "absolute",}}>
+                <div style={{ position: "absolute", }}>
                   <EmojiPicker onEmojiClick={handleEmojiHumor} />
                 </div>
               )}
