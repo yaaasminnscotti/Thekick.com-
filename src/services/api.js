@@ -9,9 +9,9 @@ async function getUsuarios() {
         console.error(erro);
     }
 }
-async function postUsuarios() {
+async function postUsuarios(dados) {
    try{
-    const {data} = await axios.post('/usuarios', document.querySelector(''), {//formulário de cadastro
+    await axios.post('/usuarios', dados, {//formulário de cadastro
         headers: {
     'Content-Type': 'application/json'
     }
@@ -20,7 +20,7 @@ async function postUsuarios() {
         console.error(erro);
     }
 }
-async function getUsuarios(params) {
+// async function getUsuarios(params) {
     
-}
+// }
 export default { getUsuarios, postUsuarios };
