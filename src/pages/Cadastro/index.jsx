@@ -1,8 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import style from "./cadastro.module.css";
 import { useState } from "react";
-import Login from "../Login";
-import { postUsuarios } from '../../services/api.js'
+import { postUsuarios } from '../../services/api.js';
 
 function Cadastro() {
   const navigate = useNavigate();
@@ -31,7 +30,7 @@ function Cadastro() {
     }
 
     console.log("Dados do formulário:", formData);
-    postUsuarios(formData)
+    postUsuarios(formData);
 
     navigate("/");
   };
@@ -45,7 +44,7 @@ function Cadastro() {
           type="text"
           required
           placeholder="Usuário"
-          value={formData.nome_usuario}
+          value={formData.nome}
           onChange={handleChange}
         />
         <input
@@ -53,7 +52,7 @@ function Cadastro() {
           type="email"
           required
           placeholder="E-mail"
-          value={formData.email_usuario}
+          value={formData.email}
           onChange={handleChange}
         />
         <input
@@ -61,7 +60,7 @@ function Cadastro() {
           type="password"
           required
           placeholder="Senha"
-          value={formData.senha_usuario}
+          value={formData.senha}
           onChange={handleChange}
         />
         <input
@@ -72,7 +71,7 @@ function Cadastro() {
           value={formData.confirmar_senha}
           onChange={handleChange}
         />
-        <button type="submit" onClick={"/cabecalho"} onSubmit={Login}>
+        <button type="submit">
           Cadastrar
         </button>
         <h2>

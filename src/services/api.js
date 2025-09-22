@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+// import { postUsuarios } from '../../services/api.js'
 
 async function getUsuarios() {
     try {
@@ -9,18 +9,16 @@ async function getUsuarios() {
         console.error(erro);
     }
 }
-async function postUsuarios(dados) {
-   try{
+export async function postUsuarios(dados) {
+   //try{
     await axios.post('/usuarios', dados, {//formulário de cadastro
         headers: {
     'Content-Type': 'application/json'
     }
     })
-    } catch(erro){
-        console.error(erro);
-    }
+   // } catch(erro){ /* empty */ }
 }
 // async function getUsuarios(params) {
     
 // }
-export default { getUsuarios, postUsuarios };
+export default { getUsuarios};
