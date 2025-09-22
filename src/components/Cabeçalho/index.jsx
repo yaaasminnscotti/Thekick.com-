@@ -33,15 +33,15 @@ function Pagina() {
             />
             <img src={Lupa} className={style.lupa} alt="Pesquisar" />
           </div>
-          <input type="text" />
         </form>
-      
+
+
         <Link to="/" className={style.fonte}>Início</Link>
         <Link to="/novidades" className={style.fonte}>Novidades</Link>
         <Link to="/conteudo" className={style.fonte}>Conteúdo</Link>
         <Link to="/usuarios" className={style.fonte}>Usuários</Link>
 
-      < Link to="/perfil"><img className={style.fotoPerfil} src={Avatar} alt="avatar" /></Link>
+        < Link to="/perfil"><img className={style.fotoPerfil} src={Avatar} alt="avatar" /></Link>
 
       </div>
     </div>

@@ -1,5 +1,5 @@
 import Cabeçalho from '../../components/Cabeçalho'
-import PostList from '../../components/Posts/PostList'
+import Post from '../../components/Posts/Post';
 
 function Pagina() {
   return (
@@ -8,12 +8,7 @@ function Pagina() {
       <Cabeçalho />
 
       {/* Conteúdo principal */}
-      <main className="p-6 flex justify-center">
-        <div className="w-full max-w-2xl">
-         
-          <PostList />
-        </div>
-      </main>
+      <Post/>
     </div>
   );
 }
