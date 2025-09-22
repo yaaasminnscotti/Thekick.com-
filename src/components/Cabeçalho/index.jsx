@@ -41,7 +41,7 @@ function Pagina() {
         <Link to="/conteudo" className={style.fonte}>Conteúdo</Link>
         <Link to="/usuarios" className={style.fonte}>Usuários</Link>
 
-        < Link to="/perfil"><img className={style.fotoPerfil} src={Avatar} alt="avatar" /></Link>
+        < Link to="/login"><img className={style.fotoPerfil} src={Avatar} alt="avatar" /></Link>
 
       </div>
     </div>
