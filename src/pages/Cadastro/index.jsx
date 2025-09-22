@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import style from "./cadastro.module.css";
 import { useState } from "react";
 import Login from "../Login";
+import { postUsuarios } from '../../services/api.js'
 
 function Cadastro() {
   const navigate = useNavigate();
@@ -30,6 +31,7 @@ function Cadastro() {
     }
 
     console.log("Dados do formulário:", formData);
+    postUsuarios(formData)
 
     navigate("/");
   };
@@ -43,7 +45,7 @@ function Cadastro() {
           type="text"
           required
           placeholder="Usuário"
-          value={formData.nome}
+          value={formData.nome_usuario}
           onChange={handleChange}
         />
         <input
@@ -51,7 +53,7 @@ function Cadastro() {
           type="email"
           required
           placeholder="E-mail"
-          value={formData.email}
+          value={formData.email_usuario}
           onChange={handleChange}
         />
         <input
@@ -59,7 +61,7 @@ function Cadastro() {
           type="password"
           required
           placeholder="Senha"
-          value={formData.senha}
+          value={formData.senha_usuario}
           onChange={handleChange}
         />
         <input
