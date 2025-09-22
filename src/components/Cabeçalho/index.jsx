@@ -24,7 +24,7 @@ function Pagina() {
           <img className={style.imagemLogo} src={Logo} alt="Logo" />
         </header>
 
-        <form className={style.pesquisar}>
+        <formi className={style.pesquisar}>
           <div className={style.inputContainer}>
             <input
               className={style.pesquisarInput}
@@ -33,7 +33,7 @@ function Pagina() {
             />
             <img src={Lupa} className={style.lupa} alt="Pesquisar" />
           </div>
-        </form>
+        </formi>
 
 
         <Link to="/" className={style.fonte}>Início</Link>

@@ -7,9 +7,12 @@ function Cadastro() {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    nome: "",
-    email: "",
-    senha: "",
+    nome_usuario: "",
+    nascimento_usuario: "",
+    telefone_usuario: "",
+    email_usuario: "",
+    pais_usuario: "",
+    senha_usuario: "",
     confirmar_senha: "",
   });
 
@@ -24,13 +27,16 @@ function Cadastro() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (formData.senha !== formData.confirmar_senha) {
+    if (formData.senha_usuario !== formData.confirmar_senha) {
       alert("As senhas não coincidem!");
       return;
     }
 
-    console.log("Dados do formulário:", formData);
-    postUsuarios(formData);
+    // Cria um objeto excluindo o confirmar_senha antes de enviar
+    const { confirmar_senha, ...dataToSend } = formData;
+
+    console.log("Dados do formulário:", dataToSend);
+    postUsuarios(dataToSend);
 
     navigate("/");
   };
@@ -40,27 +46,51 @@ function Cadastro() {
       <form onSubmit={handleSubmit}>
         <h1>Criar Conta</h1>
         <input
-          name="nome"
+          name="nome_usuario"
           type="text"
           required
           placeholder="Usuário"
-          value={formData.nome}
+          value={formData.nome_usuario}
           onChange={handleChange}
         />
         <input
-          name="email"
+          name="nascimento_usuario"
+          type="date"
+          required
+          placeholder="Nascimento"
+          value={formData.nascimento_usuario}
+          onChange={handleChange}
+        />
+        <input
+          name="telefone_usuario"
+          type="tel"
+          required
+          placeholder="Telefone"
+          value={formData.telefone_usuario}
+          onChange={handleChange}
+        />
+        <input
+          name="email_usuario"
           type="email"
           required
           placeholder="E-mail"
-          value={formData.email}
+          value={formData.email_usuario}
           onChange={handleChange}
         />
         <input
-          name="senha"
+          name="pais_usuario"
+          type="text"
+          required
+          placeholder="País"
+          value={formData.pais_usuario}
+          onChange={handleChange}
+        />
+        <input
+          name="senha_usuario"
           type="password"
           required
           placeholder="Senha"
-          value={formData.senha}
+          value={formData.senha_usuario}
           onChange={handleChange}
         />
         <input
