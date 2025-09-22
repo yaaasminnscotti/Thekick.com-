@@ -1,8 +1,8 @@
 import { Op } from 'sequelize';
 import Usuario from '../models/usuarios.js';
-import { VerificaLogin } from '../utils/verificaLogin.js';
-import { criaTokenJwt } from '../utils/criaTokenJwt.js';
-import criaHashComSal from '../utils/criaHashSenha.js';
+import { VerificaLogin } from '../services/utils/verificaLogin.js';
+import { criaTokenJwt } from '../services/utils/criaTokenJwt.js';
+import criaHashComSal from '../services/utils/criaHashSenha.js';
 
 
 class UsuarioController {

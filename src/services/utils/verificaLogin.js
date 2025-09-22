@@ -1,4 +1,4 @@
-import Usuario from "../models/usuarios.js";
+import Usuario from '../../models/usuarios.js';
 import { decodificaHash } from "./DecodificaHash.js";
 
 export class VerificaLogin{

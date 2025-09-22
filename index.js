@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express from 'express';
 import sequelize from './src/config/db.js';
 import usuarioRoutes from '././src/Routes/usuarioRoutes.js';
@@ -6,6 +7,7 @@ import comentarioRoutes from '././src/Routes/comentarioRoutes.js';
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 app.use('/usuarios', usuarioRoutes);
 app.use('/postagens', postagemRoutes);
