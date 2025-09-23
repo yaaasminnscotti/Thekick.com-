@@ -2,11 +2,11 @@ import jwt from 'jsonwebtoken'
 
 
 function autenticaUsuario(req, res, next){
-    const autorizacaoCabecalho = req.headers['auth']
+    const autorizacaoCabecalho = req.headers['authorization'];
     const token = autorizacaoCabecalho && autorizacaoCabecalho.split(" ")[1]
 
     if(!token){
-        return res.json({message:"token não fornecido"})
+        return res.status(401).json({ message: "Token não fornecido" });
     }
     try {
         // eslint-disable-next-line no-undef
@@ -14,7 +14,8 @@ function autenticaUsuario(req, res, next){
         req.user = verificaToken;//retorna o payload do usuario para a requisição
         next()
     } catch (erro) {
-        next(erro)// necessita de tratamento de erros
+        return res.status(401).json({ message: "Token inválido ou expirado" });
+        //next(erro) -->middleware para tratamento de erros
     }
 }
 

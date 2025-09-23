@@ -12,6 +12,13 @@ async function getUsuarios() {
     console.error(erro);
   }
 }
+export async function postLogin(dados) {
+  await api.post('/usuarios', dados, {
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+}
 export async function postUsuarios(dados) {
   await api.post('/usuarios', dados, {
     headers: {
@@ -19,4 +26,4 @@ export async function postUsuarios(dados) {
     }
   });
 }
-export default { getUsuarios};
+export default { getUsuarios };
