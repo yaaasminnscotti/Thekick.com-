@@ -26,4 +26,13 @@ export async function postUsuarios(dados) {
     }
   });
 }
+export async function criarPostagem(dados) {
+  
+  await api.post('/postagens', dados, {
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+  
+}
 export default { getUsuarios };

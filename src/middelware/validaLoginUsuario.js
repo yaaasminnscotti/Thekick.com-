@@ -10,6 +10,7 @@ const usuarioSchema = yup.object({
 async function validaLoginUsuario(req, res, next){
     try {
     await usuarioSchema.validate(req.body, {abortEarly:false})
+    
     next()
     } catch (erro) {
         next(erro)
