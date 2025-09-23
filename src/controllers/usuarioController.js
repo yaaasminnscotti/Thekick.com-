@@ -3,6 +3,7 @@ import Usuario from '../models/usuarios.js';
 import { VerificaLogin } from '../services/utils/verificaLogin.js';
 import { criaTokenJwt } from '../services/utils/criaTokenJwt.js';
 import criaHashComSal from '../services/utils/criaHashSenha.js';
+import { definirCookie, obterCookie, removerCookie } from '../services/utils/Cookies.js';
 
 
 class UsuarioController {
@@ -19,10 +20,10 @@ class UsuarioController {
   static async criar(req, res) {
   try {
     const senhaHasheada = criaHashComSal(req.body.senha_usuario);
-    req.body.senha_usuario = senhaHasheada;//necessário testar :(
+    req.body.senha_usuario = senhaHasheada;
     const novoUsuario = await Usuario.create(req.body);
-    const token = criaTokenJwt(req.body.nome_usuario);
-    
+    const token = criaTokenJwt(novoUsuario);
+    definirCookie("tokenJwt", token)
 
     res.status(201).json(`${novoUsuario}, token: ${token}`);
   } catch (erro) {
@@ -49,14 +50,15 @@ class UsuarioController {
       }
       else{
         const token = criaTokenJwt(usuario)
-        req.user = {usuario, token}
+        definirCookie("tokenJwt", token)
         res.json({message:`token criado: ${token}`})
       }
   }
   static async deslogar(req, res){
     const usuarioLogado = VerificaLogin.estaLogado(req.params.id);
       if(usuarioLogado){
-        req.user = "";// esse aqui não faço a menor ideia de como fazer
+        const token = obterCookie("tokenJwt");
+        removerCookie(token)
         res.json({ message: 'Usuário desconectado com sucesso' });
       }
   }

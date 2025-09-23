@@ -1,7 +1,9 @@
 function definirCookie(chave, valor) {
   document.cookie = `${chave}=${valor};path=/`;
 }
-
+//isso aqui deve ser salvo no navegador
+//chave =  "tokenJwt"
+//valor = o token jwt
 function obterCookie(chave) {
   return document.cookie
     .split("; ")
