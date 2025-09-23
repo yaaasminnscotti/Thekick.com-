@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 const chaveSecreta = "ChaveSuperSecreta";
 
-function criaTokenJwt(payload) {
+export function criaTokenJwt(payload) {
   const tokenJwt = jwt.sign(payload, chaveSecreta, {
     expiresIn: "1h",
   });
@@ -9,4 +9,4 @@ function criaTokenJwt(payload) {
   return tokenJwt;
 }
 
-export default criaTokenJwt;
+
