@@ -40,7 +40,7 @@ font-weight: bold;
 }
 
 h2 a:hover {
-  background: linear-gradient(
+  color: linear-gradient(
     0deg,
     rgba(255, 255, 255, 1) 7%,
     rgba(235, 122, 235, 1) 50%,

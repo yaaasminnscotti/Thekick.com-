@@ -46,6 +46,7 @@ function Cadastro() {
       <form onSubmit={handleSubmit}>
         <h1>Criar Conta</h1>
         <input
+          autoComplete="off"
           name="nome_usuario"
           type="text"
           required
@@ -54,6 +55,7 @@ function Cadastro() {
           onChange={handleChange}
         />
         <input
+          autoComplete="off"
           name="nascimento_usuario"
           type="date"
           required
@@ -62,6 +64,7 @@ function Cadastro() {
           onChange={handleChange}
         />
         <input
+          autoComplete="off"
           name="telefone_usuario"
           type="tel"
           required
@@ -70,6 +73,7 @@ function Cadastro() {
           onChange={handleChange}
         />
         <input
+        autoComplete="off"
           name="email_usuario"
           type="email"
           required
@@ -78,6 +82,7 @@ function Cadastro() {
           onChange={handleChange}
         />
         <input
+        autoComplete="off"
           name="pais_usuario"
           type="text"
           required
@@ -86,6 +91,7 @@ function Cadastro() {
           onChange={handleChange}
         />
         <input
+        autoComplete="off"
           name="senha_usuario"
           type="password"
           required
@@ -94,6 +100,7 @@ function Cadastro() {
           onChange={handleChange}
         />
         <input
+        autoComplete="off"
           name="confirmar_senha"
           type="password"
           required

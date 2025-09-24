@@ -48,6 +48,7 @@ function Login() {
           placeholder='Usuário'
           value={formData.nome}
           onChange={handleChange}
+          autoComplete='off'
         />
         <input 
           name='email' 
@@ -56,6 +57,7 @@ function Login() {
           placeholder='E-mail'
           value={formData.email}
           onChange={handleChange}
+          autoComplete='off'
         />
         <input 
           name='senha' 
@@ -64,6 +66,7 @@ function Login() {
           placeholder='Senha'
           value={formData.senha}
           onChange={handleChange}
+          autoComplete='off'
         />
         <button type="submit" onClick={"/"}>Entrar</button>
         <h2>Não possui uma conta? <Link to="/cadastro">Cadastre-se</Link></h2>

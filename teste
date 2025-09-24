@@ -1,1 +1,6 @@
 teste
+*como conectar o model ao controler
+criando modelos: npx sequelize-cli model:generate --name Categoria --attributes titulo:string 
+npx sequelize-cli db:migrate, envia as alternaçoes para o banco
+migrations, services e controllers
+migratione controlers para evitar de criar os metodos para todas as tabelas
