@@ -30,7 +30,7 @@ function Login() {
     }
     
     // Cria um objeto excluindo o confirmar_senha antes de enviar
-    const { confirmar_senha, ...dataToSend } = formData;
+    const { /*confirmar_senha,*/ ...dataToSend } = formData;
     console.log("Dados do formulário:", dataToSend);
     postLogin(dataToSend);
     
