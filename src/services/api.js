@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { obterCookie } from './utils/Cookies';
-import decodificaToken from './utils/decodificaToken';
+import { VerificaLogin } from './utils/verificaLogin';
+import verificaCadastro from './utils/verificaCadastro';
 
 const api = axios.create({
   baseURL: 'http://localhost:3000', // endereço do backend
@@ -14,12 +14,38 @@ async function getUsuarios() {
     console.error(erro);
   }
 }
-export async function postLogin(dados) {
-  await api.post('/usuarios', dados, {
-    headers: {
-      'Content-Type': 'application/json'
+export async function postLogin({ ...dados}) {
+  try {
+
+    const usuario = await verificaCadastro(dados.email_usuario)
+
+    if (!usuario) {
+      alert("Usuário não encontrado");
+      return;
     }
-  });
+
+    const id = usuario.id_usuario;
+    const ehUsuario = await VerificaLogin(dados);
+
+
+    if(ehUsuario){
+      await api.post('/usuarios',dados,
+      {
+        headers: { 'Content-Type': 'application/json'},
+        params:{ id_usuario: id },
+      });
+
+    }
+
+    else{
+      alert("Dados inválidos")
+    }
+  } catch (erro) {
+    
+    console.error("Erro no postLogin:", erro);
+    alert("Erro ao realizar login");
+  }
+  
 }
 export async function postUsuarios(dados) {
   await api.post('/usuarios', dados, {
@@ -29,12 +55,11 @@ export async function postUsuarios(dados) {
   });
 }
 export async function criarPostagem(dados) {
-  const token  = obterCookie("tokenJwt")
-  const payloadUsuario = decodificaToken(token)
+  const dadosUsuario =  sessionStorage.getItem(`user`);
   //é necessário modificar as informações do modelo do post
   //para salvar as outras informações da postagem -->texto, humor, likes, etc.
   const dadosPost = {
-    id_usuario: payloadUsuario.id_usuario,
+    id_usuario: dadosUsuario.id_usuario,
     dados:dados
   }
   await api.post('/postagens', dadosPost, {
@@ -44,4 +69,10 @@ export async function criarPostagem(dados) {
   });
   
 }
+// async function obterDadosCookie() {
+
+//   const token  = obterCookie("tokenJwt")
+//   return decodificaToken(token)
+  
+// }
 export default { getUsuarios };

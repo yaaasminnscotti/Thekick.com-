@@ -22,6 +22,7 @@ class UsuarioController {
     const senhaHasheada = criaHashComSal(req.body.senha_usuario);
     req.body.senha_usuario = senhaHasheada;
     const novoUsuario = await Usuario.create(req.body);
+    sessionStorage.setItem(`user-${novoUsuario.id_usuario}`, novoUsuario)
     const token = criaTokenJwt(novoUsuario);
     definirCookie("tokenJwt", token)
 
@@ -49,6 +50,7 @@ class UsuarioController {
         res.json({ message: 'Usuário Já está conectado' });
       }
       else{
+        sessionStorage.setItem(`user-${usuario.id_usuario}`, usuario)
         const token = criaTokenJwt(usuario)
         definirCookie("tokenJwt", token)
         res.json({message:`token criado: ${token}`})
@@ -57,6 +59,7 @@ class UsuarioController {
   static async deslogar(req, res){
     const usuarioLogado = VerificaLogin.estaLogado(req.params.id);
       if(usuarioLogado){
+        sessionStorage.removeItem(`${req.params.id}`)
         const token = obterCookie("tokenJwt");
         removerCookie(token)
         res.json({ message: 'Usuário desconectado com sucesso' });
