@@ -38,12 +38,12 @@ export async function postLogin({ ...dados}) {
     }
 
     else{
-      alert("Dados inválidos")
+      console.log("Dados inválidos")
     }
   } catch (erro) {
-    
+
     console.error("Erro no postLogin:", erro);
-    alert("Erro ao realizar login");
+    console.log("Erro ao realizar login");
   }
   
 }
