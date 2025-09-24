@@ -13,7 +13,7 @@ function autenticaUsuario(req, res, next){
         const verificaToken = jwt.verify(token, process.env.JWT_SECRET)
         req.user = verificaToken;//retorna o payload do usuario para a requisição
         next()
-    } catch (erro) {
+    } catch{
         return res.status(401).json({ message: "Token inválido ou expirado" });
         //next(erro) -->middleware para tratamento de erros
     }

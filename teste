@@ -4,3 +4,5 @@ criando modelos: npx sequelize-cli model:generate --name Categoria --attributes 
 npx sequelize-cli db:migrate, envia as alternaçoes para o banco
 migrations, services e controllers
 migratione controlers para evitar de criar os metodos para todas as tabelas
+Como usar a herança de classe para adicionar Services e Controllers sem duplicar os métodos de CRUD;
+Como utilizar métodos especiais criados com associação dos modelos para adicionar funcionalidades à API.

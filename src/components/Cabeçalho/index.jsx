@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 function Pagina() {
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const setIsLoggedIn = useState(false);
 
 
   useEffect(() => {
@@ -15,7 +15,7 @@ function Pagina() {
     if (token) {
       setIsLoggedIn(true);
     }
-  }, []);
+  });
 
   return (
     <div className={style.menuWrapper}>
