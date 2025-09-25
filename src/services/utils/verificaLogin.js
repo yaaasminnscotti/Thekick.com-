@@ -7,10 +7,8 @@ export class VerificaLogin{
     const usuario = await Usuario.findOne({ where: { id_usuario: id }} );
     const senhaCorreta =  await decodificaHash(senha, usuario.senha_usuario);
     const reqUsuario =  payload;
-    if(!(usuario && reqUsuario && senhaCorreta)){
+    if(!(usuario || reqUsuario || senhaCorreta)){
         return false;
-    } else if(!senhaCorreta){
-      console.log("senha incorreta")
     }
     
     return true;
