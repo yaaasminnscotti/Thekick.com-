@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import style from './login.module.css';
+import stylelogin from './login.module.css';
 import { useState } from 'react';
 import { postLogin } from '../../services/api';
 
@@ -38,7 +38,7 @@ function Login() {
   };
 
   return (
-    <div className={style.container}>
+    <div className={stylelogin.container}>
       <form onSubmit={handleSubmit}>
         <h1>Login</h1>
         <input 

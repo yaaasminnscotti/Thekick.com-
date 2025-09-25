@@ -32,12 +32,8 @@ function Cadastro() {
       return;
     }
 
-    // Cria um objeto excluindo o confirmar_senha antes de enviar
-    const { /*confirmar_senha,*/ ...dataToSend } = formData;
-
-    console.log("Dados do formulário:", dataToSend);
+    const { confirmar_senha, ...dataToSend } = formData;
     postUsuarios(dataToSend);
-
     navigate("/");
   };
 
@@ -73,7 +69,7 @@ function Cadastro() {
           onChange={handleChange}
         />
         <input
-        autoComplete="off"
+          autoComplete="off"
           name="email_usuario"
           type="email"
           required
@@ -82,7 +78,7 @@ function Cadastro() {
           onChange={handleChange}
         />
         <input
-        autoComplete="off"
+          autoComplete="off"
           name="pais_usuario"
           type="text"
           required
@@ -91,7 +87,7 @@ function Cadastro() {
           onChange={handleChange}
         />
         <input
-        autoComplete="off"
+          autoComplete="off"
           name="senha_usuario"
           type="password"
           required
@@ -100,7 +96,7 @@ function Cadastro() {
           onChange={handleChange}
         />
         <input
-        autoComplete="off"
+          autoComplete="off"
           name="confirmar_senha"
           type="password"
           required
@@ -108,7 +104,7 @@ function Cadastro() {
           value={formData.confirmar_senha}
           onChange={handleChange}
         />
-        <button type="submit">
+        <button type="submit" className={style.btn}>
           Cadastrar
         </button>
         <h2>
